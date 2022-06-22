@@ -32,6 +32,9 @@ const members = [
     one of the properties to assign a new value in the same step
 14. Use reduce function on array and object
 */
+firstNames =members.map(item => console.log(item.name.split(' ')[0]))
+lastNames = members.map(item => item.name.split(' ')[1].toUpperCase());
+console.log("Last Names: ",lastNames);
 let total_age = 0;
 let largest_age = 0;
 let young = [];
@@ -63,15 +66,12 @@ console.log("Largest Age is: ",largest_age)
 console.log("Average Age is: ",total_age/members.length)
 members.splice(2, 0, {name: "Ankit Chaudhary",age: 21});
 console.log(members[2])
-const [zero,first,second] = members;
-console.log("Element at index 1: ",first);
-console.log("Element at index 2: ",second);
+const {name, age} = members[0];
+console.log("Element at index 1: ",name);
+console.log("Element at index 2: ",age);
 members.splice(0,0,{name: "Shivam Gupta",age: 21});
 console.log(members[0])
 console.log(first.name);
 console.log(zero.name);
 second.name = "Ankit Chaudary(Edited)"
 console.log(second)
-let array = [...members];
-array[0].name = "Edit";
-console.log(array[0])
